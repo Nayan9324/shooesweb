@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Head</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="popper.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>	
+	<link rel="stylesheet" type="text/css" href="Master.css">
+    <script>
+		$(document).ready(function(){
+  		$('[data-toggle="popover"]').popover();      
+		});
+	</script>
+
+	<style type="text/css">
+		#plan:hover{
+			text-decoration: underline;
+			color:#ff471a; 
+		}
+
+		#zoom:hover{
+ 			-webkit-transform: scaleX(-1);
+  			transform: scaleX(-1);
+ 		}
+		 footer{
+			background-color: rgb(121, 97, 68);
+		}
+		</style>
+</head>
+<body>
+    <header >
+		<div class="container" >
+			<div class="row">
+				<div class="col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
+					<img src="img/logo.png" class="img-fluid mx-auto" height="40" width="140">
+				</div>
+
+				<div class="col-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
+					<form class="form-inline" style="margin-top: 50px; margin-left: 60px;">
+						<div class="input-group">
+							<input class="form-control mr-sm-2" type="text" placeholder="Search....">
+							<button class="btn btn-success" type="submit"  style="background-color: #2d3436;background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%); border: none;">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #2d3436;background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+	  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item" ><a class="nav-link"  href="index.html" style="width: 140px; text-align: center;color: white;">HOME</a></li>
+					<li class="nav-item active" style="border-bottom: 3px solid black; font-size: 17px;"><a class="nav-link"  href="Shoes.html" style="width: 180px; text-align: center;color: white;">SHOES</a></li>
+					<li class="nav-item"><a class="nav-link"  href="OrderNow.html" style="width: 180px; text-align: center;color: white;">ORDER NOW</a></li>	
+					<li class="nav-item"><a class="nav-link"  href="reviews.html" style="width: 180px; text-align: center;color: white;">REVIEWS</a></li>	
+					<li class="nav-item"><a class="nav-link"  href="Contact.html" style="width: 180px; text-align: center;color: rgb(250, 249, 247);">CONTACT</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>
+    <br>
+    <div class="container">
+        <div class="cont">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <img src="img/tumbnail.jpg"  width="700" height="400px" class=" img-fluid mx-auto d-block "><br>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <p style="font-size: 23px; line-height: 28px; text-align: center;"><b></b> <b><i>
+                        "Quality isn’t just a feature; it’s the foundation of every step you take. Experience unmatched comfort, durability, and style with shoes crafted to elevate your journey."</i></b> – Anonymous  <br>
+                    </p>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <p style="font-size: 20px; line-height: 28px; text-align: justify;">
+                    <b>-</b>I hope our shoes bring you the same feeling of warmth and care as cherished memories of loved ones. Just as homemade baked goods carry the love and attention of the hands that made them, every pair of shoes we offer is crafted with care, quality, and dedication to your comfort and style.
+                     <br><br>
+
+                    <b>-</b>   If you’ve ever experienced the joy of something made just for you, then you’ll understand the passion we pour into every design. We hope you feel that same connection and thoughtfulness with every purchase from Sneaker Head.
+                    </p><br>
+                </div>	
+            </div>	 
+        </div>			
+    </div><br>
+    
+    <div class="container">
+        <div class="Category" id="CakesCategory2">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h1 style="text-align: center;">-Our Collection -</h1>
+                </div>
+            </div><br>
+            
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="DietPlan" style="border:3px solid  #9f720a; border-radius: 20px; padding: 15px 5px 5px 5px;">
+                        <a href=""><h3 id="plan" style="text-align: center; color:  black;margin-bottom: 30px;">MENS WEAR</h3></a>
+                        <a href=""><img id="zoom" src="img/men.webp" class="img-thumbnail img-fluid mx-auto d-block"  width="480" style="border-radius: 20px;height: 300px;"></a>
+                        
+                        <br>
+                                <a style="font-size: 19px;margin-left: 200px;" href=""><b><u>Read More >><br><br></u></b></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="DietPlan1" style="border:3px solid  #9f720a; border-radius: 20px; padding: 15px 5px 3px 5px;">
+                        <a href="1WeekDietPlan.html"><h3 id="plan" style="text-align: center; color: black; margin-bottom: 30px;"> WOMENS WARE</h3></a>
+                        <a href="1WeekDietPlan.html"><img id="zoom" src="img/women.webp" class="img-thumbnail img-fluid mx-auto d-block " width="480" 
+                            style="border-radius: 20px;height: 300px;"></a>
+                        <br>
+                         <a style="font-size: 19px;margin-left: 200px;" href="WeightLossDietPlan.html" ><b><u>Read More >><br><br></u></b></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="container"  id="ShoesSection1">
+        <div class="row" >
+		<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+		<img id="zoom" src="img/shoe1.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+								style="border-radius: 20px;height: 250px;">
+                                   <br>
+								<h2 style="text-align: center;font-size: 23px;">Nike Pegasus</h2>
+							</div>
+
+								
+		<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+		<img id="zoom" src="img/shoe2.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+								style="border-radius: 20px;height: 250px;">
+								<br>
+								<h2 style="text-align: center;font-size: 23px;">Canvas Shoes</h2>
+
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+						<img id="zoom" src="img/shoe3.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+												style="border-radius: 20px;height: 250px;">
+												<br>
+												<h2 style="text-align: center;font-size: 23px;">Merrell Hiking Shoe</h2>
+				
+									</div>
+
+									<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										<img id="zoom" src="img/shoe4.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+																style="border-radius: 20px;height: 250px;">
+																<br>
+																<h2 style="text-align: center;font-size: 23px;">Ogiy Shoes</h2>
+								
+													</div>
+				</div>
+			</div><br><br>
+
+
+
+
+
+			<div class="container">
+				<div class="Category" id="ShoesSection2">
+				<div class="row">
+				<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+				<img id="zoom" src="img/shoe5.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+										style="border-radius: 20px;height: 250px;">
+										<br>
+										<h2 style="text-align: center;font-size: 23px;">Loafer</h2>
+									</div>
+		
+										
+				<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+				<img id="zoom" src="img/shoe6.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+										style="border-radius: 20px;height: 250px;">
+										<br>
+										<h2 style="text-align: center;font-size: 23px;">Formals</h2>
+		
+							</div>
+		
+							<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+								<img id="zoom" src="img/shoe7.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+														style="border-radius: 20px;height: 250px;">
+														<br>
+														<h2 style="text-align: center;font-size: 23px;">Tenstar</h2>
+						
+											</div>
+		
+											<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+												<img id="zoom" src="img/shoe8.jpg" class="img-thumbnail img-fluid mx-auto d-block " width="350" 
+																		style="border-radius: 20px;height: 250px;">
+																		<br>
+																		<h2 style="text-align: center; font-size: 23px;">Studs</h2>
+										
+															</div>
+						</div>
+					</div>
+					</div><br><br><br><br>
+        
+                    <div id="Brands" class="container"> 
+                        <div>
+                            <div id="TopShoeBrandsSection">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <h1 style="text-align: center;">- Top Shoe Brands & Products in India -</h1>
+                                    </div>
+                                </div><br>
+                                
+                                <div class="row">    
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div style="border:3px solid #0a74a6; border-radius: 20px;" class="bg-light">
+                                            <h3 style="text-align: center; border-bottom: 3px solid #0a74a6; border-radius: 20px; padding-top: 10px; padding-bottom: 10px;">Top 10 Shoe Brands</h3>
+                                            <ol style="padding-left: 100px; font-size: 19px;">
+                                                <li> Nike</li>
+                                                <li> Adidas</li>
+                                                <li> Puma</li>
+                                                <li> Reebok</li>
+                                                <li> Woodland</li>
+                                                <li> Bata</li>
+                                                <li> Red Tape</li>
+                                                <li> Liberty</li>
+                                                <li> Hush Puppies</li>
+                                                <li> Relaxo</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div style="border:3px solid #0a74a6; border-radius: 20px;" class="bg-light">
+                                            <h3 style="text-align: center; border-bottom: 3px solid #0a74a6; border-radius: 20px; padding-top: 10px; padding-bottom: 10px;">Products</h3>
+                                            <ol style="padding-left: 100px; font-size: 19px;">
+                                                <li>Running Shoes</li>
+                                                <li>Casual Sneakers</li>
+                                                <li>Formal Shoes</li>
+                                                <li>Sandals & Slippers</li>
+                                                <li>Sports Shoes</li>
+                                                <li>Boots</li>
+                                                <li>Loafers</li>
+                                                <li>Heels & Wedges</li>
+                                                <li>Flip Flops</li>
+                                                <li>Orthopedic Shoes</li>    
+                                            </ol>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div style="border:3px solid #0a74a6; border-radius: 20px;" class="bg-light">
+                                            <h3 style="text-align: center; border-bottom: 3px solid #0a74a6; border-radius: 20px; padding-top: 10px; padding-bottom: 10px;">Newly Added</h3>
+                                            <ol style="padding-left: 100px; font-size: 19px;">
+                                                <li>Metro Shoes</li>
+                                                <li> Mochi</li>
+                                                <li> Skechers</li>
+                                                <li> Crocs</li>
+                                                <li> Khadim's</li>
+                                                <li> Clarks</li>
+                                                <li> Campus</li>
+                                                <li> Paragon</li>
+                                                <li> Lee Cooper</li>
+                                                <li> Fila</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br><br>
+                        
+
+    <footer class="bg-dark">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4>@ 2024 Sneaker Head . All Copy Rights Reserved. </h4>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sneaker Head</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="popper.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+	integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="Master.css">
+	<style type="text/css">
+		.carousel-inner img {
+     		width: 100%;
+      		height: 460px;
+ 		}
+
+ 		#zoom:hover{
+ 			-webkit-transform: scaleX(-1);
+  			transform: scaleX(-1);
+ 		}	
+
+ 		#link:hover{
+ 			font-size: 25px;
+ 		}
+		
+a,i:hover{
+	color: black;
+}
+
+form .fc {
+height: 50px;
+position: relative;
+margin-bottom: 16px;
+}
+
+.sa3{
+background: rgb(143, 79, 58);
+text-decoration: none;
+width: 170px;
+height: 50px;
+text-align: center;
+border-radius: 6px;
+margin-top: 70px;
+
+}
+.sa3,a{
+padding-top: 10px;
+
+}
+.sa3:hover{
+background: rgb(192, 89, 4);
+
+}
+
+.fc input {
+height: 100%;
+width: 50%;
+background:gray;
+border: none;
+outline: none;
+border-radius: 4px;
+color:white;
+font-size: 1rem;
+padding: 0 20px;
+}
+
+.fc input:is(:focus, :valid) {
+background:rgb(99, 97, 97);
+padding: 16px 20px 0;
+color: rgb(226, 221, 221);
+}
+
+.fc label {
+position: absolute;
+left: 20px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 1rem;
+pointer-events: none;
+color:white;
+transition: all 0.1s ease;
+}
+
+.fc input:is(:focus, :valid)~label {
+font-size: 0.75rem;
+transform: translateY(-130%);
+}
+
+.map-responsive{
+overflow:hidden;
+padding-bottom:50%;
+position:relative;
+height:0;
+}
+.map-responsive iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+body{
+background-color: white;
+}
+.carousel{
+margin-top: 50px;
+}
+.carousel-inner1{
+height: 100px;
+color: black;
+}
+.carousel-caption{
+color: #090909;
+top: 50%;
+}
+.sr-only{
+background: black;
+}
+.hovereffect {
+width: 100%;
+height: 100%;
+float: left;
+overflow: hidden;
+position: relative;
+text-align: center;
+cursor: default;
+}
+
+.hovereffect .overlay {
+width: 405px;
+height: 245px;
+position: absolute;
+overflow: hidden;
+top: 0;
+left: 0;
+background-color: rgba(75,75,75,0.7);
+-webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+}
+
+.hovereffect:hover .overlay {
+background-color: rgba(48, 152, 157, 0.4);
+}
+
+.hovereffect img {
+display: block;
+position: relative;
+height: 245px;
+width: 405px;
+}
+
+.hovereffect h2 {
+text-transform: uppercase;
+color: #fff;
+text-align: center;
+position: relative;
+font-size: 17px;
+padding: 10px;
+background: rgba(0, 0, 0, 0.6);
+-webkit-transform: translateY(35px);
+-ms-transform: translateY(35px);
+transform: translateY(35px);
+-webkit-transition: all 0.4s  cubic-bezier(1.88,-0.99, 0, 1.81);
+transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.91);
+}
+
+.hovereffect:hover h2 {
+-webkit-transform: translateY(10px);
+-ms-transform: translateY(20px);
+transform: translateY(56px);
+}
+
+.hovereffect a.info {
+display: inline-block;
+text-decoration: none;
+padding: 7px 14px;
+text-transform: uppercase;
+color: #fff;
+border: 1px solid #fff;
+background-color: transparent;
+opacity: 0;
+filter: alpha(opacity=0);
+-webkit-transform: scale(0);
+-ms-transform: scale(0);
+transform: scale(0);
+-webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+font-weight: normal;
+margin: 2px 0 0 0;
+padding: 52px 100px;
+}
+
+.hovereffect:hover a.info {
+opacity: 1;
+filter: alpha(opacity=100);
+-webkit-transform: scale(1);
+-ms-transform: scale(0.5);
+transform: scale(1);
+}
+
+.hovereffect a.info:hover {
+box-shadow: 0 0 5px #fff;
+}
+	</style>
+</head>
+<body>
+	<header >
+		<div class="container" >
+			<div class="row">
+				<div class="col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
+					<img src="img/logo.png" class="img-fluid mx-auto" height="40" width="140">
+				</div>
+
+				<div class="col-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
+					<form class="form-inline" style="margin-top: 50px; margin-left: 60px;">
+						<div class="input-group">
+							<input class="form-control mr-sm-2" type="text" placeholder="Search....">
+							<button class="btn btn-success" type="submit"  style="background-color: #2d3436;background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%); border: none;">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #2d3436;background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%) ">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+	  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item active" ><a class="nav-link"  href="index.html" style="width: 140px; text-align: center;color: white;">HOME</a></li>
+					<li class="nav-item" ><a class="nav-link"  href="Shoes.html" style="width: 180px; text-align: center;color: white;">SHOES</a></li>
+					<li class="nav-item"><a class="nav-link"  href="OrderNow.html" style="width: 180px; text-align: center;color: white;">ORDER NOW</a></li>	
+					<li class="nav-item" style="border-bottom: 3px solid black; font-size: 17px;"><a class="nav-link"  href="reviews.html" style="width: 180px; text-align: center;color: white;">REVIEWS</a></li>	
+					<li class="nav-item"><a class="nav-link"  href="Contact.html" style="width: 180px; text-align: center;color: rgb(250, 249, 247);">CONTACT</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>
+	<br>
+	
+    <section>
+
+		<div class="container-fluid">
+			<div class="cont" style="margin-top: 20px;">
+				<div class="row">
+
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<iframe src="video.mp4" style="top:0;left:0;width:100%;height:600px;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+						</iframe>
+					</div>
+				</div>	 
+			</div>			
+		</div><br>
+
+		<div class="container">
+			<div class="cont" style="font-size: 20px;text-align: center;">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<p >
+							<a href="https://maps.app.goo.gl/Q4M3BdY8yJXJiEcN9" style="color: rgb(181, 36, 128);" ><i class="fa-solid fa-location-dot"></i></a>&nbsp;&nbsp;Plot no. 21,near IDBI BANK, Kalamboli,
+							Panvel-410218
+						</p>
+					</div>
+				</div>	 
+			</div>			
+		</div><br>
+
+	</section><br>
+
+
+	<div id="carouselExampleControls" class="carousel1 slide" data-ride="carousel" style="background: linear-gradient(to left,rgb(107, 92, 65),rgb(216, 216, 214),rgb(115, 110, 86)) ;height: 500PX;border-bottom: 10px solid rgb(218, 155, 93);border-top: 10px solid  rgb(204, 149, 54);">
+		<div class="carousel-inner1" style="height: 450px;">
+			<h1 style="font-family: garamond;text-align: center;font-weight: bold;margin-top: 50px;font-size: 60px;">REVIEWS</h1>
+		  <div class="carousel-item active">
+			<div class="carousel-caption">
+				<h3 style="font-family: garamond;font-weight:bold ;">REVIEW BY-GOOGLE</h3>
+			  <p style="font-family: bell mt;font-size: 24px;font-weight: bold;">Veronica W:&nbsp;<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i><i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i></p>
+			  <p style="font-family: garamond;font-size: 22px; margin: 0px 200px;">Incredible value for the price! You’re getting premium quality and comfort for half the cost of high-end brands. I was skeptical at first, but these shoes exceeded my expectations. They’ve become my go-to pair for work and casual outings. Would definitely buy again</p>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<div class="carousel-caption">
+			  <h3 style="font-family: garamond;font-weight:bold ;">REVIEW BY-GOOGLE</h3>
+			  <p style="font-family: bell mt;font-size: 24px;font-weight: bold;">Amanda C:&nbsp;<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i><i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i></p>
+			  <p style="font-family: garamond;font-size: 22px; margin: 0px 200px;">I’ve had these shoes for six months now, and they still look brand new. The craftsmanship is outstanding, and the materials are top-notch. They’ve survived rain, mud, and long walks without a scratch. Definitely worth every penny for the durability alone!</p>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<div class="carousel-caption">
+			  <h3 style="font-family: garamond;font-weight:bold ;">REVIEW BY-GOOGLE</h3>
+			  <p style="font-family: bell mt;font-size: 24px;font-weight: bold;">Kim R:&nbsp;<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i><i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+				<i class="fa-solid fa-star" style="font-size: 18px;"></i></p>
+			  <p style="font-family: garamond;font-size: 22px; margin: 0px 200px;">These shoes are a game-changer for my wardrobe! The sleek design and vibrant colors make them stand out, and I’ve received so many compliments. They’re versatile enough to pair with casual or semi-formal outfits. If you want to make a style statement, these are the ones to get!</p>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<div class="carousel-caption">
+				<h3 style="font-family: garamond;font-weight:bold ;">REVIEW BY-GOOGLE</h3>
+				<p style="font-family: bell mt;font-size: 24px;font-weight: bold;">Daynes M:&nbsp;<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+					<i class="fa-solid fa-star" style="font-size: 18px;"></i><i class="fa-solid fa-star" style="font-size: 18px;"></i>
+					<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+					<i class="fa-solid fa-star" style="font-size: 18px;"></i></p>
+				<p style="font-family: garamond;font-size: 22px; margin: 0px 200px;">These are hands down the most comfortable shoes I've ever owned! The cushioning feels like walking on clouds, and they fit perfectly right out of the box. No break-in period required. I wore them all day, and my feet were happy the entire time. Highly recommend for anyone looking for a perfect blend of comfort and style!</p>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<div class="carousel-caption">
+				<h3 style="font-family: garamond;font-weight:bold ;">REVIEW BY-GOOGLE</h3>
+				<p style="font-family: bell mt;font-size: 24px;font-weight: bold;">Luke J:&nbsp;<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+					<i class="fa-solid fa-star" style="font-size: 18px;"></i><i class="fa-solid fa-star" style="font-size: 18px;"></i>
+					<i class="fa-solid fa-star" style="font-size: 18px;"></i>
+					<i class="fa-solid fa-star" style="font-size: 18px;"></i></p>
+				<p style="font-family: garamond;font-size: 22px;  margin: 0px 200px;">I’ve had these shoes for six months now, and they still look brand new. The craftsmanship is outstanding, and the materials are top-notch. They’ve survived rain, mud, and long walks without a scratch. Definitely worth every penny for the durability alone!</p>
+			</div>
+		  </div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" >
+		  <span class="carousel-control-next-icon" aria-hidden="true" style="color: black;"></span>
+		  <span class="sr-only" >Next</span>
+		</a>
+	  </div><br><br><br>
+												
+</div>
+</div>
+</div>
+
+
+
+
+	<section id="Location" style="margin-top: 20px;">
+		<div class="container-fluid" >
+		
+		<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+					<div class="cont" style="margin-left: 50px;">
+						    <h1 style="font-weight: bolder;font-family: garamond;font-size: 60px;margin-top: 70px;">NEWSLETTER</h1>
+						    <p style="font-family: garamond;font-size: 23px;margin-top: 20px;">Sign up for our newsletter & get exclusive offers and invites! <br><br>Email (required)</p>
+                            <div class="fw">
+					            <form action="#">
+						            <div class="fc">
+							            <input class="form-control input-lg" type="text" required>
+							            <label  type="placeholder" style="font-family: garamond;">e.g. email@example.com</label>
+			                        </div>
+						                       
+									<button type="submit" style="background: rgb(147, 85, 29);border: none;width: 120px;height: 50px;font-family: garamond;font-weight: bolder;color: white;border-radius: 8px;">SUBMIT</button>
+					            </form><br><br>	
+				            </div>
+					</div>
+				</div>
+				                                
+					                                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+						                                <div class="map-responsive">
+							                                <div class="a1">
+							                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1885.8641501190705!2d73.10268370045861!3d19.031690487854917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9c49efb0225%3A0xd999cca38d99d213!2sShop%20No%2010%2C%20Yash%20Complex%2C%20Plot%20No%2021%2C%20Sector%208%2C%20Kalamboli%2C%20Panvel%2C%20Thane%2C%20Navi%20Mumbai%2C%20Maharashtra%20410218!5e0!3m2!1sen!2sin!4v1733764747659!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						                                    </div>
+														</div>
+					
+				                                    </div>
+												
+					
+			</div>
+		</div>
+	</section>
+
+
+
+		<footer class="bg-dark">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<h4>@ 2024 Sneaker Head . All Copy Rights Reserved. </h4>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
+
+
